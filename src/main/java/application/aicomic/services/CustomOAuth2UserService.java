@@ -1,10 +1,9 @@
-package application.aicomic.Services;
+package application.aicomic.services;
 
-import application.aicomic.Repositories.UsersRepository;
+import application.aicomic.repositories.UsersRepository;
 import org.springframework.stereotype.Service;
 
-import application.aicomic.Enums.Role;
-import application.aicomic.Models.Users;
+import application.aicomic.models.Users;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.user.OAuth2User;

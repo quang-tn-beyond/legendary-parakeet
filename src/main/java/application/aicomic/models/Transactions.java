@@ -1,4 +1,4 @@
-package application.aicomic.Models;
+package application.aicomic.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Data
 public class Transactions {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "transaction_id", length = 50)
     private String transactionId;
 

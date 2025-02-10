@@ -1,6 +1,6 @@
-package application.aicomic.Repositories;
+package application.aicomic.repositories;
 
-import application.aicomic.Models.Users;
+import application.aicomic.models.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

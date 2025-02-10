@@ -1,11 +1,9 @@
-package application.aicomic.Models;
+package application.aicomic.models;
 
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -15,6 +13,7 @@ import java.util.List;
 @Data
 public class Users {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id", length = 50)
     private String userId;
 
@@ -74,45 +73,5 @@ public class Users {
 
     @ManyToMany(mappedBy = "user")
     private List<Bookshelves> bookshelves;
-
-        public void setUserId(String userId) {
-            this.userId = userId;
-        }
-
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
-
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
-
-        public void setBirthDate(LocalDate birthDate) {
-            this.birthDate = birthDate;
-        }
-
-        public void setGender(String gender) {
-            this.gender = gender;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
-
-        public void setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-        }
-
-        public void setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-        }
-
-        public void setRole(byte role) {
-            this.role = role;
-        }
-
-        public void setStatus(byte status) {
-            this.status = status;
-        }
 }
 

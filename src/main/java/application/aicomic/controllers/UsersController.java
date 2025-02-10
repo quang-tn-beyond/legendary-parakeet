@@ -1,8 +1,8 @@
-package application.aicomic.Controllers;
+package application.aicomic.controllers;
 
-import application.aicomic.Models.Users;
-import application.aicomic.Repositories.UsersRepository;
-import application.aicomic.Services.UsersService;
+import application.aicomic.models.Users;
+import application.aicomic.repositories.UsersRepository;
+import application.aicomic.services.UsersService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.*;

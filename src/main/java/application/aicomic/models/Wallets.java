@@ -1,4 +1,4 @@
-package application.aicomic.Models;
+package application.aicomic.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 public class Wallets {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "wallet_id", length = 50)
     private String walletId;
 

@@ -1,8 +1,8 @@
-package application.aicomic.Services;
+package application.aicomic.services;
 
-import application.aicomic.DataAccess.UserServiceResponseDto;
-import application.aicomic.Models.Users;
-import application.aicomic.Repositories.UsersRepository;
+import application.aicomic.dataAccess.UserServiceResponseDto;
+import application.aicomic.models.Users;
+import application.aicomic.repositories.UsersRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

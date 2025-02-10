@@ -1,4 +1,4 @@
-package application.aicomic.Models;
+package application.aicomic.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 public class OrderDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "order_detail_id", length = 50)
     private String orderDetailId;
 

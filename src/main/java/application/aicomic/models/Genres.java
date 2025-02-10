@@ -1,4 +1,4 @@
-package application.aicomic.Models;
+package application.aicomic.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 public class Genres {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "genres_id", length = 50)
     private String genresId;
 

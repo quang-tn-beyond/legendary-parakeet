@@ -1,4 +1,4 @@
-package application.aicomic.Enums;
+package application.aicomic.enums;
 
 public enum Role {
     ADMIN((byte) 1),
@@ -6,9 +6,9 @@ public enum Role {
     MODERATOR((byte) 3),
     STAFF((byte) 4),
     CUSTOMER_NORMAL((byte) 5),
-    CUSTOMER_VIP1((byte) 6),
-    CUSTOMER_VIP2((byte) 7),
-    CUSTOMER_VIP3((byte) 8);
+    CUSTOMER_READER((byte) 6),
+    CUSTOMER_AUTHOR((byte) 7),
+    CUSTOMER_VIP((byte) 8);
 
     private final byte value;
 

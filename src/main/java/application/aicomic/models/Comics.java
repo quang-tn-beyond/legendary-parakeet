@@ -1,7 +1,6 @@
-package application.aicomic.Models;
+package application.aicomic.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -13,6 +12,7 @@ import java.util.List;
 @Data
 public class Comics {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "comic_id", length = 50)
     private String comicId;
 

@@ -1,4 +1,4 @@
-package application.aicomic.Enums;
+package application.aicomic.enums;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;

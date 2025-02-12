@@ -20,7 +20,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/users/login", "/users/logout").permitAll()
+                        .requestMatchers("/users/login", "/users/logout", // Các endpoint API cần mở
+                                "/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html", "/v3/api-docs.yaml", // Swagger UI
+                                "/webjars/**", "/swagger-resources/**" ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth2 -> oauth2 //

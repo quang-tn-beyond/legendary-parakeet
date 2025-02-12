@@ -1,8 +1,10 @@
 package application.aicomic.models;
 
+import application.aicomic.enums.TransactionsEnums;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import org.hibernate.resource.transaction.spi.TransactionStatus;
 
 import java.time.LocalDateTime;
 
@@ -24,7 +26,7 @@ public class Transactions {
 
     @NotNull
     @Column(name = "status")
-    private byte status;
+    private byte status = TransactionsEnums.NOT_PAID.getValue();
 
     @NotNull
     @Column(name = "order_id", length = 50)

@@ -14,8 +14,8 @@ public enum CommentsEnums {
     public byte getValue() {
         return value;
     }
-    public static CurrentChapterEnums fromValue(byte value) {
-        for (CurrentChapterEnums x : CurrentChapterEnums.values()) {
+    public static CommentsEnums fromValue(byte value) {
+        for (CommentsEnums x : CommentsEnums.values()) {
             if (x.getValue() == value) {
                 return x;
             }

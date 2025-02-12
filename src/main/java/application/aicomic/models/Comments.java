@@ -1,5 +1,6 @@
 package application.aicomic.models;
 
+import application.aicomic.enums.CommentsEnums;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -32,7 +33,7 @@ public class Comments {
 
     @NotNull
     @Column(name = "status")
-    private byte status;
+    private byte status = CommentsEnums.AVAILABLE.getValue();
 
     @ManyToOne
     @JoinColumn(name = "chapter_id", referencedColumnName = "chapter_id", insertable = false, updatable = false)

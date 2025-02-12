@@ -45,10 +45,8 @@ public class UsersController {
         if (principal == null) {
             throw new RuntimeException("User is not authenticated");
         }
-
         String email = principal.getAttribute("email");
         System.out.println("Email from OAuth2User: " + email);
-
         return usersRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found in database"));
 
     }

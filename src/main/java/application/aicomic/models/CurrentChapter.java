@@ -1,5 +1,6 @@
 package application.aicomic.models;
 
+import application.aicomic.enums.CurrentChapterEnums;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -15,7 +16,7 @@ public class CurrentChapter {
 
     @NotNull
     @Column(name = "status")
-    private byte status;
+    private byte status = CurrentChapterEnums.AVAILABLE.getValue();
 
     @NotNull
     @Column(name = "comic_id", length = 50)

@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ComicsRepository extends JpaRepository<Comics, String> {
-    List<Comics> findByRole(byte role);
 
     Optional<Comics> findByComicName(String comicName);
 

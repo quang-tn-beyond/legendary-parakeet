@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import application.aicomic.dataAccess.WalletsDTO;
@@ -13,7 +14,8 @@ import java.util.List;
 import application.aicomic.services.WalletsService;
 
 @RestController
-public class WaletsController {
+@RequestMapping("/wallets")
+public class WalletsController {
     private WalletsService walletsService;
 
     @GetMapping
@@ -21,7 +23,7 @@ public class WaletsController {
         return walletsService.getAllWallets();
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Wallets getWalletById(@PathVariable String walletsId) {
         return walletsService.getWalletById(walletsId);
     }

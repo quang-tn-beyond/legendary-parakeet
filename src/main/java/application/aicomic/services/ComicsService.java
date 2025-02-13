@@ -31,8 +31,8 @@ public class ComicsService {
         return comicsRepository.findAll();
     }
 
-    public Comics getComicsByName(String comicsName) {
-        return comicsRepository.findByComicsName(comicsName).orElse(null);
+    public Comics getComicsByName(String comicName) {
+        return comicsRepository.findByComicName(comicName).orElse(null);
     }
 
     public List<Comics> getComicsByCompletionStatus(boolean isCompleted) {

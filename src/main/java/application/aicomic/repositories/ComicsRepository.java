@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface ComicsRepository extends JpaRepository<Comics, String> {
     List<Comics> findByRole(byte role);
 
-    Optional<Comics> findByComicsName(String comicsName);
+    Optional<Comics> findByComicName(String comicName);
 
     List<Comics> findByStatusIn(List<Byte> statuses);
 }
